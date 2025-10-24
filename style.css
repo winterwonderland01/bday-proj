@@ -2,7 +2,7 @@
 
 /* Prevent page scroll */
 html, body {
-  overflow: hidden; /* Disable scrolling */
+  overflow: auto; /* Disable scrolling */
   height: 100%;
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(-45deg, #d4f8d4, #eaffd0, #a8e6a1, #81c784);
@@ -364,3 +364,4 @@ footer {
   z-index: 1;
   pointer-events: none;
 }
+
