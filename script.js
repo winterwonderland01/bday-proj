@@ -83,13 +83,8 @@ overlay.addEventListener('click', () => {
   popup.classList.remove('show');
 
   // Enable page scrolling again
-  document.body.style.overflow = window.innerWidth > 600 ? 'auto' : 'auto';
+  document.body.style.overflow = 'auto';
 });
-
-
-    // Enable page scrolling again
-    document.body.style.overflow = 'auto';
-  });
 
   // Confetti
   function spawnConfetti(count) {
@@ -150,5 +145,6 @@ envelope.onclick = () => {
     }, 15);
   });
 };
+
 
 
