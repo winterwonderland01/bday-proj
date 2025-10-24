@@ -2,7 +2,7 @@
 
 /* Prevent page scroll */
 html, body {
-  overflow: auto; /* Disable scrolling */
+  overflow: hidden; /* Disable scrolling */
   height: 100%;
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(-45deg, #d4f8d4, #eaffd0, #a8e6a1, #81c784);
@@ -363,5 +363,22 @@ footer {
   opacity: 0.7;
   z-index: 1;
   pointer-events: none;
+}
+/* Mobile-specific scrolling */
+@media (max-width: 600px) {
+  html, body {
+    overflow: auto;
+    height: auto;
+  }
+
+  #front-page {
+    position: relative;
+    height: auto;
+  }
+
+  #main-content {
+    position: relative;
+    height: auto;
+  }
 }
 
