@@ -59,11 +59,12 @@ envelope.addEventListener('click', () => {
   overlay.classList.add('show');
   popup.classList.add('show');
 
-  // Disable scrolling only on desktop
-  if (window.innerWidth > 600) {
-    document.body.style.overflow = 'hidden';
-  }
+  // Disable page scrolling
+  document.body.style.overflow = 'hidden';
+  
+  
 });
+
 
     // Trigger fade-in for paragraphs like typewriter
     const paragraphs = popup.querySelectorAll('p');
@@ -149,4 +150,5 @@ envelope.onclick = () => {
     }, 15);
   });
 };
+
 
