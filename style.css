@@ -364,37 +364,3 @@ footer {
   z-index: 1;
   pointer-events: none;
 }
-/* Mobile-specific scrolling */
-@media (max-width: 600px) {
-  html, body {
-    overflow: auto;
-    height: auto;
-  }
-
-  #front-page {
-    position: relative;
-    height: auto;
-  }
-
-  #main-content {
-    position: relative;
-    height: auto;
-  }
-
-  /* Make popup letter scrollable on mobile */
-  #popupLetter {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    max-height: none;
-    margin: 20px;
-  }
-
-  .overlay {
-    position: relative;
-  }
-}
-
-
-
