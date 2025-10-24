@@ -380,5 +380,21 @@ footer {
     position: relative;
     height: auto;
   }
+
+  /* Make popup letter scrollable on mobile */
+  #popupLetter {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    max-height: none;
+    margin: 20px;
+  }
+
+  .overlay {
+    position: relative;
+  }
 }
+
+
 
