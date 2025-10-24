@@ -364,3 +364,17 @@ footer {
   z-index: 1;
   pointer-events: none;
 }
+/* --- Popup letter text adjustments --- */
+
+/* Font size for letter paragraphs */
+.popup-letter p.popup-para {
+  font-size: 1rem;       /* smaller than before */
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* Font size for the signature */
+.popup-letter p:last-child strong {
+  font-size: 0.95rem;    /* slightly smaller than paragraph text */
+  color: #355e3b;        /* subtle and readable */
+}
