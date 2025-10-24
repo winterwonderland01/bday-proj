@@ -53,14 +53,17 @@ setInterval(() => {
     alert("Awww... okay maybe later 😢");
   });
 
-  // envelope click flap + popup
-  envelope.addEventListener('click', () => {
-    envelope.querySelector('.flap').classList.add('open');
-    overlay.classList.add('show');
-    popup.classList.add('show');
+// envelope click flap + popup
+envelope.addEventListener('click', () => {
+  envelope.querySelector('.flap').classList.add('open');
+  overlay.classList.add('show');
+  popup.classList.add('show');
 
-    // Disable page scrolling
+  // Disable scrolling only on desktop
+  if (window.innerWidth > 600) {
     document.body.style.overflow = 'hidden';
+  }
+});
 
     // Trigger fade-in for paragraphs like typewriter
     const paragraphs = popup.querySelectorAll('p');
@@ -72,11 +75,16 @@ setInterval(() => {
     spawnConfetti(80); // confetti
   });
 
-  // close popup
-  overlay.addEventListener('click', () => {
-    envelope.querySelector('.flap').classList.remove('open');
-    overlay.classList.remove('show');
-    popup.classList.remove('show');
+ // close popup
+overlay.addEventListener('click', () => {
+  envelope.querySelector('.flap').classList.remove('open');
+  overlay.classList.remove('show');
+  popup.classList.remove('show');
+
+  // Enable page scrolling again
+  document.body.style.overflow = window.innerWidth > 600 ? 'auto' : 'auto';
+});
+
 
     // Enable page scrolling again
     document.body.style.overflow = 'auto';
@@ -141,3 +149,4 @@ envelope.onclick = () => {
     }, 15);
   });
 };
+
